@@ -6,7 +6,7 @@
 
 ## What You'll Build
 
-In the next 20 minutes, you'll create your first machine learning model that predicts flower species with 95%+ accuracy.
+In the next 30 minutes, you'll create your first machine learning model that predicts flower species with 95%+ accuracy.
 
 The same code works in all environments - just pick the one that fits your situation.
 
@@ -14,14 +14,14 @@ The same code works in all environments - just pick the one that fits your situa
 
 **Want to start immediately?** → [Google Colab](01-google-colab.md) (no setup needed)
 
-**Want to work offline?** → [Jupyter Notebook](02-jupyter.md) (15 min setup)
+**Want to work offline?** → [JupyterLab](02-jupyter.md) (15 min setup)
 
 **Want professional tools?** → [Python IDE](03-python.md) (30 min setup)
 
 ## Simple Comparison
 
 **Google Colab**: Works in your browser, no setup, easy sharing
-**Jupyter Notebook**: Runs on your computer, works offline, more control  
+**JupyterLab**: Runs on your computer, works offline, modern interface  
 **Python IDE**: Professional tools, advanced features, steeper learning curve
 
 ## What's Next?
@@ -29,7 +29,7 @@ The same code works in all environments - just pick the one that fits your situa
 Pick one and follow the setup guide:
 
 1. **[Google Colab](01-google-colab.md)** - Start in 5 minutes
-2. **[Jupyter Notebook](02-jupyter.md)** - 15 minute setup
+2. **[JupyterLab](02-jupyter.md)** - 15 minute setup
 3. **[Python IDE](03-python.md)** - 30 minute setup
 
 All three will teach you the same ML concepts - just pick what feels right for your situation.
@@ -38,8 +38,8 @@ All three will teach you the same ML concepts - just pick what feels right for y
 
 **Absolutely!** These environments work well together:
 
-- Start with **Colab** for immediate gratification, then move to **Jupyter** for local work
-- Learn basics in **Jupyter**, then transition to **Python IDE** for professional projects
+- Start with **Colab** for immediate gratification, then move to **JupyterLab** for local work
+- Learn basics in **JupyterLab**, then transition to **Python IDE** for professional projects
 - Use **Colab** for GPU-intensive work while doing daily development in **Jupyter**
 
 The ML concepts and Python code you learn transfer completely between environments.

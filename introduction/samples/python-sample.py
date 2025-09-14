@@ -1,15 +1,3 @@
-#!/usr/bin/env python3
-"""
-🌸 Your First ML Model in Python
-
-A simple machine learning example that predicts flower species.
-
-How to use:
-1. Install packages: pip install scikit-learn
-2. Run this file: python python-sample.py
-"""
-
-# Import what we need
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split

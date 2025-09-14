@@ -1,7 +1,7 @@
 # Python IDE Setup
 
 **Goal:** Write Python code on your computer  
-**Time:** 10 minutes  
+**Time:** 15 minutes  
 
 ## Quick Setup
 
@@ -10,16 +10,11 @@
 2. Download and install
 3. Open VS Code
 
-### 2. Add Python Support
-1. Click Extensions (four squares icon)
-2. Search "Python" 
-3. Install the Python extension by Microsoft
-
-### 3. Get Python
+### 2. Get Python (if needed)
 - **Windows:** Download from [python.org](https://python.org)
 - **Mac:** Run `brew install python`
 
-### 4. Try It Out
+### 3. Try It Out
 1. Create new file: `my_first_ml.py`
 2. Copy this code:
 
@@ -41,8 +36,8 @@ prediction = model.predict([[5.1, 3.5, 1.4, 0.2]])
 print(f"Predicted species: {data.target_names[prediction[0]]}")
 ```
 
-3. Install packages: `pip install scikit-learn`
-4. Run your code: Press F5
+3. Setup and activate the virtual environment: `source .venv/bin/activate` (or equivalent)
+4. Run the file from the Terminal: `python my_first_ml.py`
 
 ## Terminal Basics
 
@@ -110,7 +105,7 @@ source .venv/bin/activate  # Mac
 .venv\Scripts\activate     # Windows
 
 # Install packages in this environment
-pip install scikit-learn numpy pandas matplotlib
+pip install numpy pandas scikit-learn
 
 # Your packages are now isolated to this project!
 ```
@@ -121,9 +116,3 @@ pip install scikit-learn numpy pandas matplotlib
 - **Clean installs:** No conflicts between projects
 
 💡 **Tip:** Activate your virtual environment every time you work on your project!
-
-## Next Steps
-
-✅ **You're ready!** Try our [complete ML example](04-first-ml-example.md)
-
-**Want something easier?** Try [Google Colab](01-google-colab.md) or [Jupyter](02-jupyter.md) instead.

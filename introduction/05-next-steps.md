@@ -56,6 +56,8 @@ print(arr * 2)  # Element-wise multiplication
 print(np.dot(matrix, matrix))  # Matrix multiplication
 ```
 
+**Next Level**: Ready for deeper NumPy? Check out our [comprehensive NumPy notebook](../numpy_pandas_scikit-learn/01_numpy/numpy.ipynb) with neural network examples and advanced operations.
+
 **Resources**:
 - [NumPy Quickstart](https://numpy.org/doc/stable/user/quickstart.html)
 - [NumPy Tutorial](https://www.w3schools.com/python/numpy/)
@@ -83,6 +85,8 @@ print(df.info())
 df_clean = df.dropna()  # Remove missing values
 df_grouped = df.groupby('category').mean()  # Group by category
 ```
+
+**Next Level**: Master real-world data preprocessing with our [comprehensive Pandas notebook](../numpy_pandas_scikit-learn/02_pandas/pandas.ipynb) featuring customer analytics and feature engineering.
 
 **Resources**:
 - [Pandas Getting Started](https://pandas.pydata.org/docs/getting-started/)
@@ -120,6 +124,8 @@ model.fit(X_train, y_train)
 predictions = model.predict(X_test)
 accuracy = accuracy_score(y_test, predictions)
 ```
+
+**Next Level**: Ready for advanced ML? Our [comprehensive scikit-learn notebook](../numpy_pandas_scikit-learn/03_scikit-learn/scikit-learn.ipynb) covers classification, regression, clustering, and model evaluation in depth.
 
 **Resources**:
 - [Scikit-learn User Guide](https://scikit-learn.org/stable/user_guide.html)

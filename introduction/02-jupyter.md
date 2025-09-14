@@ -94,26 +94,7 @@ jupyter notebook
 
 
 
-### Understanding Virtual Environments (Recommended)
 
-Virtual environments keep your projects organized and prevent conflicts. We use `.venv` as the standard name:
-
-```bash
-# Create a virtual environment for ML
-python -m venv .venv
-
-# Activate it (Windows)
-.venv\Scripts\activate
-
-# Activate it (Mac)
-source .venv/bin/activate
-
-# Install packages in this environment
-pip install jupyter notebook numpy pandas matplotlib scikit-learn seaborn
-
-# Start Jupyter
-jupyter notebook
-```
 
 ### 🚀 High-Performance Computing (HPC) Access
 
@@ -310,12 +291,9 @@ my_ml_project/
 
 ### Keyboard Shortcuts
 - `Shift + Enter`: Run cell and move to next
-- `Ctrl + Enter`: Run cell and stay
-- `A`: Insert cell above
-- `B`: Insert cell below
-- `DD`: Delete cell (press D twice)
-- `M`: Convert to Markdown (text) cell
-- `Y`: Convert to code cell
+- `Ctrl+Enter` (Windows) / `Cmd+Enter` (Mac): Run cell and stay
+
+💡 **Tip**: Many more keyboard shortcuts are available for faster productivity! Look for keyboard shortcut options in the interface when you're ready to speed up your workflow.
 
 ### Magic Commands
 ```python
@@ -372,15 +350,7 @@ Predict iris species from flower measurements
 !pip list
 ```
 
-### Manage Environments
-```bash
-# Create environment for different projects
-python -m venv .venv
 
-# Activate the environment
-source .venv/bin/activate  # Mac
-.venv\Scripts\activate     # Windows
-```
 
 ## Common Issues & Solutions
 

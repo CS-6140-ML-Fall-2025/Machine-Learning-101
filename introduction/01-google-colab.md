@@ -153,7 +153,7 @@ print(f"🎯 Confidence: {confidence:.1%}")
 
 ### Save Your Work
 - **Auto-save**: Colab saves to Google Drive automatically
-- **Manual save**: `Ctrl/Cmd + S` or File → Save
+- **Manual save**: Use keyboard shortcut or File → Save
 - **Download**: File → Download → Download .ipynb
 
 ### Work with Files
@@ -222,9 +222,9 @@ Today I learned how to:
 
 ### 2. Keyboard Shortcuts
 - `Shift + Enter`: Run cell and move to next
-- `Ctrl/Cmd + Enter`: Run cell and stay
-- `Ctrl/Cmd + M + B`: Add code cell below
-- `Ctrl/Cmd + M + M`: Convert to text cell
+- `Ctrl+Enter` (Windows) / `Cmd+Enter` (Mac): Run cell and stay
+
+💡 **Tip**: Many more keyboard shortcuts are available for faster productivity! Look for keyboard shortcut options in the interface when you're ready to speed up your workflow.
 
 ### 3. Get Help
 ```python
@@ -258,7 +258,7 @@ plt.show()
 **Ready for more?** Check out:
 - **[First ML Example](04-first-ml-example.md)** - More hands-on practice
 - **[Next Steps Guide](05-next-steps.md)** - Your learning pathway
-- **Sample notebook**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR-USERNAME/YOUR-REPO/blob/main/introduction/samples/colab-sample.ipynb)
+- **Sample notebook**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/CS-6140-ML-Fall-2025/TA-Classes/blob/main/introduction/samples/colab-sample.ipynb)
 
 **Want to explore other environments?**
 - **[Jupyter Notebook](02-jupyter.md)** - For local development

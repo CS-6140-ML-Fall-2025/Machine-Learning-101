@@ -27,7 +27,7 @@ def main():
     print(f"🎯 Model accuracy: {accuracy:.1%}")
     
     # Try predicting a new flower
-    new_flower = [[5.1, 3.5, 1.4, 0.2]]  # Small petals
+    new_flower = [[5.1, 3.5, 1.4, 0.2]]  # Small petals (close to 'setosa')
     prediction = model.predict(new_flower)
     species = data.target_names[prediction[0]]
     

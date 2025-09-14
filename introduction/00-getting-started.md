@@ -28,9 +28,9 @@ The same code works in all environments - just pick the one that fits your situa
 
 Pick one and follow the setup guide:
 
-1. **[Google Colab](01-google-colab.md)** - Start in 5 minutes
-2. **[JupyterLab](02-jupyter.md)** - 15 minute setup
-3. **[Python IDE](03-python.md)** - 30 minute setup
+1. **[Google Colab](01-google-colab.md)**
+2. **[JupyterLab](02-jupyter.md)**
+3. **[Python IDE](03-python.md)**
 
 All three will teach you the same ML concepts - just pick what feels right for your situation.
 

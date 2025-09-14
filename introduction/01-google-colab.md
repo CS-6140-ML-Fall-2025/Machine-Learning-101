@@ -1,12 +1,7 @@
-# Google Colab for Machine Learning Beginners
+# Google Colab Setup
 
-**What you'll learn:**
-- How to create and run your first ML notebook in under 5 minutes
-- The key advantages of Colab for ML beginners
-- How to share your work and collaborate with others
-
-**Time needed:** 15 minutes
-**Prerequisites:** A Google account (Gmail, Google Drive, etc.)
+**Goal:** Get your first ML model running in 5 minutes
+**Prerequisites:** Google account (Gmail, etc.)
 
 ## Quick Start (5 Minutes to Success!)
 

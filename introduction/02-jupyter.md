@@ -1,12 +1,8 @@
-# Jupyter Notebook for Machine Learning Beginners
+# Jupyter Notebook Setup
 
-**What you'll learn:**
-- How to install and set up Jupyter on your computer
-- The advantages of local development for ML
-- How to manage packages and environments like a pro
-
-**Time needed:** 30 minutes
-**Prerequisites:** Basic computer skills, willingness to install software
+**Goal:** Install Jupyter and run your first ML model locally
+**Time needed:** 15-30 minutes
+**Prerequisites:** Willingness to install software
 
 ## Quick Start
 
@@ -96,35 +92,21 @@ jupyter notebook
    jupyter notebook
    ```
 
-#### Linux (Ubuntu/Debian) Setup
 
-```bash
-# Update package list
-sudo apt update
-
-# Install Python and pip
-sudo apt install python3 python3-pip
-
-# Install Jupyter and ML packages
-pip3 install jupyter notebook numpy pandas matplotlib scikit-learn seaborn
-
-# Start Jupyter
-jupyter notebook
-```
 
 ### Understanding Virtual Environments (Recommended)
 
-Virtual environments keep your projects organized and prevent conflicts:
+Virtual environments keep your projects organized and prevent conflicts. We use `.venv` as the standard name:
 
 ```bash
 # Create a virtual environment for ML
-python -m venv ml_env
+python -m venv .venv
 
 # Activate it (Windows)
-ml_env\Scripts\activate
+.venv\Scripts\activate
 
-# Activate it (Mac/Linux)
-source ml_env/bin/activate
+# Activate it (Mac)
+source .venv/bin/activate
 
 # Install packages in this environment
 pip install jupyter notebook numpy pandas matplotlib scikit-learn seaborn
@@ -393,12 +375,11 @@ Predict iris species from flower measurements
 ### Manage Environments
 ```bash
 # Create environment for different projects
-python -m venv project1_env
-python -m venv project2_env
+python -m venv .venv
 
-# Activate the one you need
-source project1_env/bin/activate  # Mac/Linux
-project1_env\Scripts\activate     # Windows
+# Activate the environment
+source .venv/bin/activate  # Mac
+.venv\Scripts\activate     # Windows
 ```
 
 ## Common Issues & Solutions
@@ -471,6 +452,7 @@ jupyter nbconvert --to script my_notebook.ipynb
 git init
 
 # Add .gitignore for Jupyter
+echo ".venv/" >> .gitignore
 echo "*.ipynb_checkpoints" >> .gitignore
 echo "__pycache__/" >> .gitignore
 

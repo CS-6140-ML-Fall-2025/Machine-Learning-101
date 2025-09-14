@@ -1,23 +1,18 @@
-# ML Introduction Guides
+# Week 1: ML Introduction
 
-This directory contains beginner-friendly guides for getting started with machine learning environments.
+Simple guides to get your first machine learning model running in 20 minutes.
 
 ## 🚀 Quick Start
 
-**New to ML?** Start here: [Getting Started Guide](00-getting-started.md)
+**New to ML?** Start here: [Choose Your Environment](00-getting-started.md)
 
-## 📚 Guides
+## 📚 Week 1 Guides
 
-### 🚀 Getting Started
-1. **[Getting Started](00-getting-started.md)** - Choose your ML environment
-2. **[Google Colab](01-google-colab.md)** - Cloud-based development
-3. **[Jupyter Notebook](02-jupyter.md)** - Local development
-4. **[Python IDE](03-python.md)** - Professional development
-5. **[First ML Example](04-first-ml-example.md)** - Hands-on tutorial
-
-### 📈 Next Level
-6. **[Next Steps](05-next-steps.md)** - Your learning roadmap
-7. **[Advanced Learning Path](06-advanced-learning-path.md)** - Bridge to advanced topics
+1. **[Choose Environment](00-getting-started.md)** - Pick your tool (5 min)
+2. **[Setup Guide](01-google-colab.md)** - Colab | [Jupyter](02-jupyter.md) | [Python IDE](03-python.md)
+3. **[Build Your First Model](04-first-ml-example.md)** - Hands-on tutorial (20 min)
+4. **[Week 1 Complete](05-next-steps.md)** - What's next?
+5. **[Prepare for Week 2](06-advanced-learning-path.md)** - Get ready for deep dive
 
 ## 💻 Sample Files
 
@@ -44,24 +39,24 @@ https://colab.research.google.com/github/johndoe/ml-guides/blob/main/introductio
 
 ## 🎯 Learning Path
 
-### Beginner Path (Start Here!)
-1. **Choose your environment** using the [decision guide](00-getting-started.md) *(10 min)*
-2. **Set up your chosen tool** with the detailed guides *(15-45 min)*
-3. **Run your first ML model** with the [sample files](04-first-ml-example.md) *(20 min)*
-4. **Plan your next steps** with the [learning roadmap](05-next-steps.md) *(5 min)*
+### Week 1 Path (Start Here!)
+1. **Choose environment** → [Getting Started](00-getting-started.md) *(5 min)*
+2. **Set up your tool** → Setup guides *(15-45 min)*
+3. **Build first model** → [First ML Example](04-first-ml-example.md) *(20 min)*
+4. **Week 1 complete!** → [Next Steps](05-next-steps.md) *(5 min)*
 
-### Advanced Path (After Basics)
-5. **Bridge to advanced topics** with the [advanced learning path](06-advanced-learning-path.md) *(5 min)*
-6. **Deep dive into libraries** with the [comprehensive notebooks](../numpy_pandas_scikit-learn/) *(2-4 hours)*
-   - [NumPy Essentials](../numpy_pandas_scikit-learn/01_numpy/numpy.ipynb) - Arrays and neural networks
+### Week 2: Core Libraries (After Week 1)
+5. **Prepare for Week 2** with the [Week 2 preparation guide](06-advanced-learning-path.md) *(5 min)*
+6. **Master the core libraries** with the [Week 2 notebooks](../numpy_pandas_scikit-learn/) *(3-4 hours)*
+   - [NumPy Deep Dive](../numpy_pandas_scikit-learn/01_numpy/numpy.ipynb) - Arrays and neural networks
    - [Pandas Mastery](../numpy_pandas_scikit-learn/02_pandas/pandas.ipynb) - Data preprocessing
    - [Scikit-learn Complete](../numpy_pandas_scikit-learn/03_scikit-learn/scikit-learn.ipynb) - ML algorithms
-7. **Build real projects** and join the ML community
+7. **Continue with Weeks 3-10** - Advanced topics and project building
 
-### Quick Start Options
-- **Immediate coding**: Jump to [First ML Example](04-first-ml-example.md)
-- **Environment help**: [Colab](01-google-colab.md) | [Jupyter](02-jupyter.md) | [Python IDE](03-python.md)
-- **Advanced learners**: Start with [NumPy notebook](../numpy_pandas_scikit-learn/01_numpy/numpy.ipynb)
+### Quick Options
+- **Complete beginner**: [Getting Started](00-getting-started.md)
+- **Want to code now**: [First ML Example](04-first-ml-example.md)
+- **Finished Week 1**: [Week 2 notebooks](../numpy_pandas_scikit-learn/01_numpy/numpy.ipynb)
 
 ## 🔧 Troubleshooting
 
@@ -77,6 +72,7 @@ https://colab.research.google.com/github/johndoe/ml-guides/blob/main/introductio
 - **Learning path**: See [Next Steps](05-next-steps.md) for community resources and support
 
 ### Prerequisites Check
+- **Operating System**: Windows or macOS (setup guides focus on these two)
 - **Python basics**: Variables, functions, loops (if new to Python, start with online tutorials first)
 - **Math comfort**: Basic statistics and algebra (high school level is sufficient)
 - **Time commitment**: 30-60 minutes for introduction, 2-4 hours for advanced notebooks

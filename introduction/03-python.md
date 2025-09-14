@@ -1,12 +1,8 @@
-# Python IDE for Machine Learning Beginners
+# Python IDE Setup
 
-**What you'll learn:**
-- How to set up a professional Python development environment
-- The advantages of IDEs for serious ML development
-- How to transition from notebooks to production-ready code
-
-**Time needed:** 45 minutes
-**Prerequisites:** Comfort with installing software and learning new tools
+**Goal:** Set up professional development tools for ML
+**Time needed:** 30-45 minutes
+**Prerequisites:** Comfortable installing software
 
 ## Quick Start
 
@@ -73,10 +69,6 @@
 # Windows: Download from python.org
 # Mac: 
 brew install python
-
-# Linux (Ubuntu/Debian):
-sudo apt update
-sudo apt install python3 python3-pip
 ```
 
 ### 4. Set Up Your First ML Project
@@ -430,6 +422,7 @@ Run tests with: `python -m pytest tests/`
 git init
 
 # Create .gitignore
+echo ".venv/" >> .gitignore
 echo "__pycache__/" >> .gitignore
 echo "*.pyc" >> .gitignore
 echo ".pytest_cache/" >> .gitignore
@@ -529,9 +522,9 @@ python -m pip install --upgrade pip
 pip install --user package_name
 
 # Use virtual environment
-python -m venv myenv
-source myenv/bin/activate  # Mac/Linux
-myenv\Scripts\activate     # Windows
+python -m venv .venv
+source .venv/bin/activate  # Mac
+.venv\Scripts\activate     # Windows
 ```
 
 ### Code not running

@@ -1,29 +1,29 @@
-# Advanced Machine Learning Learning Path
+# Week 2 Preparation Guide
 
 **What you'll learn:**
-- How to progress from basic ML to advanced techniques
-- When you're ready for the comprehensive notebooks
-- How to bridge the gap between introduction and advanced topics
+- How to approach the Week 2 technical notebooks
+- What to expect from the deep dive into NumPy, Pandas, and Scikit-learn
+- How to succeed with more intensive technical content
 
-**Time needed:** 5 minutes to read, weeks to master!
-**Prerequisites:** Completed [First ML Example](04-first-ml-example.md) and [Next Steps](05-next-steps.md)
+**Time needed:** 5 minutes to read, 3-4 hours to complete Week 2!
+**Prerequisites:** Completed Week 1 ([First ML Example](04-first-ml-example.md) and [Next Steps](05-next-steps.md))
 
-## 🎯 Are You Ready for Advanced Learning?
+## 🎯 Are You Ready for Week 2?
 
 **You should feel comfortable with:**
-- ✅ Creating and running ML models in your chosen environment
-- ✅ Understanding basic concepts: training, testing, accuracy
-- ✅ Working with the iris dataset and making predictions
-- ✅ Basic Python, NumPy arrays, and Pandas DataFrames
+- ✅ Running the iris classifier in your chosen environment
+- ✅ Understanding the basic ML workflow: data → model → predictions
+- ✅ Basic Python syntax (variables, functions, loops)
+- ✅ Installing and importing Python packages
 
 **If you're not there yet:**
 - Review the [First ML Example](04-first-ml-example.md)
 - Practice with the sample files in your environment
-- Make sure you can run the iris classifier successfully
+- Make sure you can run the iris classifier without errors
 
-## 📚 The Advanced Notebooks
+## 📚 Week 2: The Core Libraries
 
-We have three comprehensive notebooks that dive deep into each library:
+Week 2 consists of three comprehensive notebooks that teach the essential tools of ML:
 
 ### 1. 📊 [NumPy Deep Dive](../numpy_pandas_scikit-learn/01_numpy/numpy.ipynb)
 **When to start:** After you're comfortable with basic arrays and operations

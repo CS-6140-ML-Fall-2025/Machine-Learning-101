@@ -1,45 +1,20 @@
-# Your First Machine Learning Example
+# Your First Machine Learning Model
 
-**What you'll learn:**
-- How to build the same ML model in any environment
-- The complete machine learning workflow from data to predictions
-- How to interpret and visualize your results
-
+**Goal:** Build a flower classifier that's 95%+ accurate
 **Time needed:** 20 minutes
-**Prerequisites:** One of the environments set up (Colab, Jupyter, or Python IDE)
+**Prerequisites:** Environment set up (Colab, Jupyter, or Python IDE)
 
-## The Universal ML Example
+## What We're Building
 
-This example works identically in **Google Colab**, **Jupyter Notebook**, and **Python IDEs**. The code is the same - only the way you run it differs slightly.
+A machine learning model that can identify iris flower species from measurements. Same code works in all environments!
 
-### What We're Building
+## Quick Start
 
-We'll create a **flower species classifier** that can:
-- 🌸 Identify iris flower species from measurements
-- 📊 Visualize the data patterns
-- 🎯 Achieve 95%+ accuracy
-- 🔮 Make predictions on new flowers
+**Google Colab**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/CS-6140-ML-Fall-2025/TA-Classes/blob/main/introduction/samples/colab-sample.ipynb)
 
-This is a classic machine learning problem that teaches all the fundamentals!
+**Jupyter Notebook**: [Download jupyter-sample.ipynb](samples/jupyter-sample.ipynb)
 
-## Choose Your Environment
-
-### Option 1: Google Colab (Easiest)
-1. **Click this link**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/CS-6140-ML-Fall-2025/TA-Classes/blob/main/introduction/samples/colab-sample.ipynb)
-2. **Save a copy**: File → Save a copy in Drive
-3. **Run each cell**: Press Shift + Enter for each code block below
-
-### Option 2: Jupyter Notebook (Local)
-1. **Download the notebook**: [jupyter-sample.ipynb](samples/jupyter-sample.ipynb)
-2. **Open Jupyter**: Run `jupyter notebook` in your terminal
-3. **Open the file**: Navigate to and open the downloaded notebook
-4. **Run each cell**: Press Shift + Enter for each code block below
-
-### Option 3: Python IDE (Professional)
-1. **Download the script**: [python-sample.py](samples/python-sample.py)
-2. **Open in your IDE**: VS Code, PyCharm, etc.
-3. **Install packages**: `pip install numpy pandas matplotlib scikit-learn seaborn`
-4. **Run the script**: Press F5 or run `python python-sample.py`
+**Python IDE**: [Download python-sample.py](samples/python-sample.py)
 
 ## The Complete Example
 

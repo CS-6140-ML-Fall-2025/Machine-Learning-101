@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Path: Programming Tools Building Blocks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #00695c;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #004d40;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+            opacity: 0.8;
+        }
+        
+        .step-indicator {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .step-button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            background: white;
+            color: #00695c;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            font-size: 1em;
+        }
+        
+        .step-button.active {
+            background: linear-gradient(135deg, #00897b, #00695c);
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,105,92,0.3);
+        }
+        
+        .step-button:hover:not(.active) {
+            background: #e0f2f1;
+            transform: translateY(-2px);
+        }
+        
+        .step-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .step-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .diagram {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            min-height: 500px;
+        }
+        
+        .diagram-title {
+            text-align: center;
+            color: #004d40;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+        }
+        
+        .building-blocks {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .block-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        
+        .block {
+            background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+            min-width: 150px;
+            position: relative;
+            cursor: default;
+        }
+        
+        .block:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .block.foundation {
+            background: linear-gradient(135deg, #66bb6a, #4caf50);
+            font-size: 1.4em;
+            padding: 25px 40px;
+        }
+        
+        .block.library {
+            background: linear-gradient(135deg, #ffb74d, #ff9800);
+        }
+        
+        .block.framework {
+            background: linear-gradient(135deg, #f06292, #e91e63);
+        }
+        
+        .block.tool {
+            background: linear-gradient(135deg, #ba68c8, #9c27b0);
+        }
+        
+        .block.ide {
+            background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+        }
+        
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 30px solid #b0bec5;
+            margin: 10px auto;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+        
+        .explanation {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+        
+        .explanation h3 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .explanation p {
+            color: #1b5e20;
+            line-height: 1.6;
+        }
+        
+        .block-description {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.7em;
+            color: #546e7a;
+            white-space: nowrap;
+            background: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .block:hover .block-description {
+            opacity: 1;
+        }
+        
+        .layer {
+            border: 3px dashed #b0bec5;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .layer-label {
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: white;
+            padding: 5px 15px;
+            color: #546e7a;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        
+        .highlight-new {
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2), 0 0 30px rgba(255, 193, 7, 0.3);
+            }
+            50% {
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2), 0 0 40px rgba(255, 193, 7, 0.6);
+            }
+        }
+        
+        .note {
+            text-align: center;
+            color: #546e7a;
+            font-style: italic;
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff3e0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Learning Path: Programming Tools</h1>
+        <p class="subtitle">Building blocks approach - Start simple, add complexity step by step</p>
+        
+        <div class="step-indicator">
+            <button class="step-button active" onclick="showStep(1)">Step 1: Foundation</button>
+            <button class="step-button" onclick="showStep(2)">Step 2: + IDEs</button>
+            <button class="step-button" onclick="showStep(3)">Step 3: + Core Libraries</button>
+            <button class="step-button" onclick="showStep(4)">Step 4: + ML Libraries</button>
+            <button class="step-button" onclick="showStep(5)">Step 5: Complete Stack</button>
+        </div>
+        
+        <!-- Step 1: Foundation -->
+        <div class="step-content active" id="step1">
+            <div class="diagram">
+                <h2 class="diagram-title">Step 1: The Foundation - Python</h2>
+                <div class="building-blocks">
+                    <div class="block foundation">
+                        Python
+                        <div class="block-description">The programming language</div>
+                    </div>
+                </div>
+                <div class="explanation">
+                    <h3>💡 What is Python?</h3>
+                    <p>Python is a programming language - think of it as the foundation or the "language" you use to talk to computers. Just like you need to know English to write a book, you need to know Python to write programs. It's beginner-friendly and powerful!</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Step 2: IDEs -->
+        <div class="step-content" id="step2">
+            <div class="diagram">
+                <h2 class="diagram-title">Step 2: Where You Write Python - IDEs</h2>
+                <div class="building-blocks">
+                    <div class="layer">
+                        <span class="layer-label">Writing Tools (IDEs)</span>
+                        <div class="block-row">
+                            <div class="block ide highlight-new">
+                                Jupyter Notebook
+                                <div class="block-description">For experiments</div>
+                            </div>
+                            <div class="block ide highlight-new">
+                                Google Colab
+                                <div class="block-description">Cloud notebook</div>
+                            </div>
+                            <div class="block ide highlight-new">
+                                VS Code
+                                <div class="block-description">Professional editor</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrow"></div>
+                    <div class="block foundation">
+                        Python
+                    </div>
+                </div>
+                <div class="explanation">
+                    <h3>💡 What are IDEs?</h3>
+                    <p>IDEs (Integrated Development Environments) are like Microsoft Word but for code. You need a place to write your Python code, and these tools make it easier with features like auto-complete, error detection, and the ability to run your code. Jupyter is great for learning!</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Step 3: Core Libraries -->
+        <div class="step-content" id="step3">
+            <div class="diagram">
+                <h2 class="diagram-title">Step 3: Essential Tools - Core Libraries</h2>
+                <div class="building-blocks">
+                    <div class="layer">
+                        <span class="layer-label">IDEs</span>
+                        <div class="block-row">
+                            <div class="block ide">Jupyter</div>
+                            <div class="block ide">Colab</div>
+                            <div class="block ide">VS Code</div>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow"></div>
+                    
+                    <div class="layer">
+                        <span class="layer-label">Core Libraries</span>
+                        <div class="block-row">
+                            <div class="block library highlight-new">
+                                NumPy
+                                <div class="block-description">Numbers & Math</div>
+                            </div>
+                            <div class="block library highlight-new">
+                                Pandas
+                                <div class="block-description">Data Tables</div>
+                            </div>
+                            <div class="block library highlight-new">
+                                Matplotlib
+                                <div class="block-description">Charts & Graphs</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow"></div>
+                    
+                    <div class="block foundation">
+                        Python
+                    </div>
+                </div>
+                <div class="explanation">
+                    <h3>💡 Core Libraries - Your Basic Toolkit</h3>
+                    <p><strong>NumPy:</strong> Handles numbers and mathematical operations efficiently<br>
+                    <strong>Pandas:</strong> Works with data in tables (like Excel)<br>
+                    <strong>Matplotlib:</strong> Creates charts and visualizations<br><br>
+                    These are like pre-built LEGO blocks - instead of building everything from scratch, you use these libraries to quickly work with data!</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Step 4: ML Libraries -->
+        <div class="step-content" id="step4">
+            <div class="diagram">
+                <h2 class="diagram-title">Step 4: Machine Learning - Scikit-learn, PyTorch & TensorFlow</h2>
+                <div class="building-blocks">
+                    <div class="layer">
+                        <span class="layer-label">IDEs</span>
+                        <div class="block-row">
+                            <div class="block ide">Jupyter</div>
+                            <div class="block ide">Colab</div>
+                            <div class="block ide">VS Code</div>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow"></div>
+                    
+                    <div class="layer">
+                        <span class="layer-label">Machine Learning</span>
+                        <div class="block-row">
+                            <div class="block framework highlight-new">
+                                Scikit-learn
+                                <div class="block-description">Traditional ML</div>
+                            </div>
+                            <div class="block framework highlight-new">
+                                PyTorch
+                                <div class="block-description">Deep Learning</div>
+                            </div>
+                            <div class="block framework highlight-new">
+                                TensorFlow
+                                <div class="block-description">Deep Learning</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow"></div>
+                    
+                    <div class="layer">
+                        <span class="layer-label">Core Libraries (Foundation for ML)</span>
+                        <div class="block-row">
+                            <div class="block library">NumPy</div>
+                            <div class="block library">Pandas</div>
+                            <div class="block library">Matplotlib</div>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow"></div>
+                    
+                    <div class="block foundation">
+                        Python
+                    </div>
+                </div>
+                <div class="explanation">
+                    <h3>💡 Machine Learning Libraries</h3>
+                    <p><strong>Scikit-learn:</strong> Perfect for beginners! Handles traditional machine learning (classification, regression, clustering)<br>
+                    <strong>PyTorch & TensorFlow:</strong> For deep learning (neural networks, image recognition, language models)<br><br>
+                    Think of Scikit-learn as a bicycle (easier to learn) and PyTorch/TensorFlow as motorcycles (more powerful but need more skill). Most beginners start with Scikit-learn!</p>
+                </div>
+                <div class="note">
+                    📌 <strong>Note:</strong> PyTorch and TensorFlow do similar things - you typically choose one based on your preference or project needs.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Step 5: Complete Stack -->
+        <div class="step-content" id="step5">
+            <div class="diagram">
+                <h2 class="diagram-title">Step 5: The Complete Data Science Stack</h2>
+                <div class="building-blocks">
+                    <div class="layer">
+                        <span class="layer-label">Development Environment</span>
+                        <div class="block-row">
+                            <div class="block ide">Jupyter</div>
+                            <div class="block ide">Colab</div>
+                            <div class="block ide">VS Code</div>
+                            <div class="block ide">PyCharm</div>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow"></div>
+                    
+                    <div class="layer">
+                        <span class="layer-label">Specialized Libraries</span>
+                        <div class="block-row">
+                            <div class="block framework">Scikit-learn</div>
+                            <div class="block framework">PyTorch</div>
+                            <div class="block framework">TensorFlow</div>
+                            <div class="block framework">Keras</div>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow"></div>
+                    
+                    <div class="layer">
+                        <span class="layer-label">Data Science Essentials</span>
+                        <div class="block-row">
+                            <div class="block library">NumPy</div>
+                            <div class="block library">Pandas</div>
+                            <div class="block library">Matplotlib</div>
+                            <div class="block library">Seaborn</div>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow"></div>
+                    
+                    <div class="block foundation">
+                        Python Programming Language
+                    </div>
+                </div>
+                <div class="explanation">
+                    <h3>💡 The Complete Picture</h3>
+                    <p>This is how all the pieces fit together! You write Python code in an IDE, use core libraries for data manipulation, and add specialized libraries for machine learning. Each layer builds on the one below it - that's why we learn them in this order!</p>
+                </div>
+                <div class="note">
+                    🎯 <strong>Learning Path:</strong> Master each layer before moving up. Start with Python → Learn an IDE → Master NumPy/Pandas → Try Scikit-learn → Then explore deep learning!
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showStep(stepNumber) {
+            // Hide all steps
+            const allSteps = document.querySelectorAll('.step-content');
+            allSteps.forEach(step => step.classList.remove('active'));
+            
+            // Remove active from all buttons
+            const allButtons = document.querySelectorAll('.step-button');
+            allButtons.forEach(button => button.classList.remove('active'));
+            
+            // Show selected step
+            document.getElementById('step' + stepNumber).classList.add('active');
+            
+            // Activate selected button
+            allButtons[stepNumber - 1].classList.add('active');
+        }
+    </script>
+</body>
+</html>
